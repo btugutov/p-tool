@@ -1,0 +1,30 @@
+<div *ngIf='!user' class="main-div">
+    <h1 class="display-1 pam-tool-text">PAM Tool</h1>
+    <div class="form-row justify-content-center">
+        <a class="footer__btn-bp" (click)='login()'>
+                <span>Login</span>
+                <div class="footer__btn-bp-line">
+                    <div class="footer__btn-bp-line-inner"></div>
+                </div>
+            </a>
+    </div>
+</div>
+
+<div *ngIf='user'>
+    <div >
+        <nav class="navbar navbar-light" style="background-color: #4f91cd;">
+            <!-- Navbar content -->
+            <div class='navbar-content'>
+              <a class="navbar-brand" class="font-weight-bolder" style="font-size: xx-large; color: #f3e5b9">PAM Tool</a>
+              <a class="navbar-brand" routerLink="/new_review">New Review</a>
+              <a class="navbar-brand" routerLink="/ticket_dives">Ticket Dives</a>
+              <a class="navbar-brand" routerLink="/">History</a>
+              <a class="navbar-brand" href="https://app.powerbi.com/groups/me/reports/07ee3f97-d9a3-4b28-b6d0-e8c15eb6f87c/ReportSection274acb1d7ecdb70e69a0" target="_blank">Power BI</a>
+              <a class="navbar-brand" class="font-weight-bolder text-monospace ">User Name</a>
+            </div>
+          </nav>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+</div>

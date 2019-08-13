@@ -1,0 +1,10 @@
+.history-main-panel{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+    width: 80%;
+    margin: 0px auto;
+}
