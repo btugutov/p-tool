@@ -1,17 +1,23 @@
 const sql = require('mssql');
 const os = require('os');
 const path = require('path');
+'use strict';
 
+const fs = require('fs');
+
+let settings = JSON.parse(fs.readFileSync('./settings.json'));
+
+console.log("settings => ",settings);
 // I have to have the log function HERE because i can't call the log class until i write it ^^^
 //const hostname = os.hostname();
 //console.log(os.hostname());
 
 // this really should be in a key vault or something
 const config = {
-    user: '***************',
-    password: '***************',
-    server: '***************.database.windows.net',
-    database: '***************',
+    user: settings.db.user,
+    password: settings.db.password,
+    server: settings.db.server,
+    database: settings.db.database,
     options: {
         encrypt: true
     }

@@ -8,6 +8,7 @@ import { PamNewReviewComponent } from './pam-new-review/pam-new-review.component
 import { PamTicketDivesComponent } from './pam-ticket-dives/pam-ticket-dives.component';
 import { PamHistoryComponent } from './pam-history/pam-history.component';
 import { ConnectorService } from './connector.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ConnectorService } from './connector.service';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [ConnectorService],
   bootstrap: [AppComponent]
